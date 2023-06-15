@@ -1,0 +1,5 @@
+type UpdateWinners @entity(immutable: true) {
+  id: ID!
+  lotteryID: BigInt! # uint256
+  winners: [Bytes!]! # address[]
+}

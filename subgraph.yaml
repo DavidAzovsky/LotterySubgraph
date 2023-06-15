@@ -1,0 +1,24 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: LotteryV2
+    network: mainnet
+    source:
+      address: "0x4CF4dd3f71B67a7622ac250f8b10d266Dc5aEbcE"
+      abi: LotteryV2
+      startBlock: 0
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - UpdateWinners
+      abis:
+        - name: LotteryV2
+          file: ./abis/LotteryV2.json
+      eventHandlers:
+        - event: UpdateWinners(uint256,address[])
+          handler: handleUpdateWinners
+      file: ./src/lottery-v-2.ts
