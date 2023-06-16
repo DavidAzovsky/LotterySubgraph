@@ -5,13 +5,13 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "",
+        "name": "lotteryID",
         "type": "uint256"
       },
       {
         "indexed": false,
         "internalType": "address[]",
-        "name": "",
+        "name": "winners",
         "type": "address[]"
       }
     ],
